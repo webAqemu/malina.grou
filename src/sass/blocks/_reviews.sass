@@ -1,0 +1,71 @@
+.reviews
+    margin-bottom: 100px
+
+    &__title
+        margin-bottom: 40px
+        position: relative
+        padding-right: 60px
+        width: fit-content
+
+        &::after
+            content: ""
+            width: 50px
+            height: 50px
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 0
+            background-image: url(../img/emoji/love-letter.png)
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+
+    &__slider
+        overflow: hidden
+
+    &__item
+        border-radius: 30px
+        background-color: white
+        padding: 40px 50px
+        height: 335px
+        width: 100%
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.05)
+
+        &:not(:last-child)
+            margin-bottom: 30px
+
+    &__img
+        border-radius: 100%
+        width: 75px
+        height: 75px
+        border: 1px solid #000000
+        margin-bottom: 15px
+        object-fit: cover
+
+    &__name
+        font-size: 24px
+        font-weight: 700
+        margin-bottom: 10px
+
+    &__pagination
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 50px
+        margin-top: 50px
+
+    &__bullet
+        width: 25px
+        height: 25px
+        border-radius: 100%
+        background-color: rgba($green, 0.3)
+        cursor: pointer
+        transition: background-color 0.3s, width 0.3s, height 0.3s
+
+        &:not(:last-child)
+            margin-right: 25px
+
+        &--active
+            background-color: $green
+            width: 50px
+            height: 50px

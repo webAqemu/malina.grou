@@ -1,0 +1,50 @@
+.preview
+    padding-bottom: 100px
+    margin-bottom: 100px
+
+    &__inner
+        position: relative
+
+    &__title
+        max-width: 600px
+        width: 100%
+        margin-bottom: 30px
+
+    &__img
+        position: absolute
+        top: 0
+        right: 0
+        width: 50%
+
+    &__adv
+        max-width: 500px
+        width: 100%
+        margin-bottom: 40px
+
+    &__item
+        position: relative
+        padding-left: 50px
+
+        &::before
+            content: ""
+            width: 30px
+            height: 30px
+            background-image: url(../img/emoji/nice.png)
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+
+        &:not(:last-child)
+            margin-bottom: 25px
+
+    &__links
+        max-width: 450px
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+
