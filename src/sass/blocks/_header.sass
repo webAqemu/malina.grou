@@ -23,10 +23,67 @@
     &__menu
         display: flex
 
-    &__item:not(:last-child)
-        margin-right: 20px
+    &__item
+        &--submenu
+            position: relative
+
+            &:hover
+                .header__link
+                    border-bottom-left-radius: 0px 
+                    border-bottom-right-radius: 0px
+                    background-color: $green
+                    color: white
+
+                    &:active
+                        transform: none
+
+                .header__submenu
+                    opacity: 1
+                    pointer-events: inherit
+
+
+        &:not(:last-child)
+            margin-right: 20px
 
     &__link
         border-radius: 30px
-        padding: 11px 30px 12px
+        padding: 12px 30px 11px
         background-color: white
+        transition: border-radius 0.3s, color 0.3s, background-color 0.3s, transform 0.3s
+
+        &:hover
+            background-color: $green
+            color: white
+
+        &:active
+            transform: scale(0.9)
+
+    &__submenu
+        position: absolute
+        left: 0
+        top: calc( 100% - 1px )
+        z-index: 2
+        white-space: nowrap
+        opacity: 0
+        pointer-events: none
+        transition: opacity 0.3s
+        background-color: $green
+        color: white
+        border-radius: 30px
+        border-top-left-radius: 0px
+        overflow: hidden
+        
+        li
+            &:last-child a
+                padding-bottom: 20px
+
+            &:not(:last-child)
+                margin-bottom: 8px
+
+        a
+            display: block
+            padding: 11px 30px 12px
+            transition: color 0.3s
+
+            &:hover
+                color: black
