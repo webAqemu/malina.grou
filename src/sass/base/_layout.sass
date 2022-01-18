@@ -13,6 +13,13 @@
     box-sizing: border-box
     min-height: 0.001vw // — Fixes Safari bug with viewport units in calc()
 
+html,
+body
+    overflow-x: hidden
+
+html.active
+    overflow: hidden
+
 body
     font-family: 'Montserrat', sans-serif
     font-size: 18px
@@ -21,16 +28,31 @@ body
     color: #000000
     background-color: #f3f3f3
 
+    @include r(767px)
+        font-size: 14px
+
+    @include r(500px)
+        font-size: 12px
+
 .container
     max-width: 1480px
     width: 100%
     margin: 0 auto
     padding: 0 30px
 
+    @include r(767px)
+        padding: 0 20px
+
 .title
     font-size: 50px
     line-height: 1.3
     font-weight: 700
+
+    @include r(900px)
+        font-size: 35px
+
+    @include r(500px)
+        font-size: 24px
 
 .btn
     color: #000000
@@ -44,6 +66,11 @@ body
     text-align: center
     transition: box-shadow 0.3s, color 0.3s, background-color 0.3s, transform 0.3s
 
+    @include r(500px)
+        font-size: 12px
+        padding: 13px 26px 12px
+        min-width: 130px
+    
     &:hover
         color: $yellow
         background-color: #000000

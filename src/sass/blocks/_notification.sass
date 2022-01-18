@@ -3,6 +3,14 @@
     color: white
     font-size: 14px
     padding: 11px 0 12px
+    
+    @include r(1200px)
+        font-size: 12px
+        line-height: 1.5
+
+    @include r(767px)
+        white-space: nowrap
+        overflow-x: auto
 
     .bold
         font-weight: 600
@@ -24,3 +32,4 @@
 
     .link
         text-decoration: underline
+        padding-right: 20px

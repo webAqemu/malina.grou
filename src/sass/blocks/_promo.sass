@@ -1,5 +1,8 @@
 .promo
     margin-bottom: 100px
+
+    @include r(767px)
+        margin-bottom: 50px
     
     &__inner
         display: flex
@@ -11,11 +14,17 @@
         width: 100%
         margin-right: 30px
 
+        @include r(1200px)
+            max-width: 100%
+
     &__title
         margin-bottom: 40px
 
         .green
             color: $green
+
+        @include r(767px)
+            margin-bottom: 20px
 
     &__text
         margin-bottom: 40px
@@ -24,7 +33,20 @@
         p:not(:last-child)
             margin-bottom: 24px
 
+            @include r(767px)
+                margin-bottom: 8px
+
+        @include r(767px)
+            margin-bottom: 20px
+            font-size: 18px
+
+        @include r(500px)
+            font-size: 12px
+
     &__img
         max-width: 325px
         width: 100%
+
+        @include r(1200px)
+            display: none
 

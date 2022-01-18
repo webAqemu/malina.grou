@@ -2,13 +2,29 @@
     padding-bottom: 100px
     margin-bottom: 100px
 
+    @include r(1200px)
+        padding-bottom: 0
+
+    @include r(767px)
+        margin-bottom: 50px
+
     &__inner
         position: relative
+
+        @include r(1200px)
+            display: flex
+            flex-direction: column
 
     &__title
         max-width: 600px
         width: 100%
         margin-bottom: 30px
+
+        @include r(1200px)
+            max-width: 100%
+            
+            br
+                display: none
 
     &__img
         position: absolute
@@ -16,10 +32,23 @@
         right: 0
         width: 50%
 
+        @include r(1200px)
+            position: static
+            margin: 0 0 24px
+
+        @include r(900px)
+            width: 100%
+
     &__adv
         max-width: 500px
         width: 100%
         margin-bottom: 40px
+
+        @include r(1200px)
+            max-width: 100%
+
+        @include r(767px)
+            margin-bottom: 25px
 
     &__item
         position: relative
@@ -47,4 +76,10 @@
         display: flex
         align-items: center
         justify-content: space-between
+
+        @include r(500px)
+            justify-content: flex-start
+
+    &__link:not(:last-child)
+        margin-right: 20px
 

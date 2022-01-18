@@ -1,11 +1,22 @@
 .banner
     margin-bottom: 100px
+
+    @include r(767px)
+        margin-bottom: 50px
     
     &__inner
         background-color: $violent
         border-radius: 30px
         padding: 105px 45px
         position: relative
+
+        @include r(900px)
+            padding: 40px 30px
+
+        @include r(500px)
+            padding: 30px 15px 0 
+            display: flex
+            flex-direction: column
 
     &__title
         margin-bottom: 30px
@@ -18,10 +29,35 @@
         .black
             font-weight: 900
 
+        @include r(900px)
+            font-size: 32px
+            line-height: 1.2
+            margin-bottom: 20px
+
+        @include r(500px)
+            font-size: 18px
+
+    &__link
+        @include r(500px)
+            width: fit-content
+
     &__img
         position: absolute
         bottom: 0
         right: 130px
         max-width: 326px
         width: 100%
+
+        @include r(1400px)
+            right: 30px
+            max-width: 25%
+
+        @include r(1200px)
+            display: none
+
+        @include r(500px)
+            display: block
+            position: static
+            max-width: 90%
+            margin: 20px 0 0 auto
         
