@@ -27,6 +27,9 @@
                 justify-content: flex-start
                 padding-bottom: 40px
 
+                @include r(767px)
+                    padding-bottom: 20px
+
     &__item
         padding: 45px 45px 70px
         border-radius: 30px
@@ -87,6 +90,7 @@
         @include r(500px)
             max-width: 40px
             max-height: 40px
+            margin-bottom: 10px
 
     &__link
         display: block
@@ -100,3 +104,7 @@
         margin-top: 15px
         font-size: 18px
         font-weight: 500
+
+        @include r(767px)
+            font-size: 10px
+            margin-top: 7px
