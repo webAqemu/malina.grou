@@ -1,0 +1,41 @@
+include base/_head
+    include blocks/_notification
+    include blocks/_header
+    main.main.companies 
+        include blocks/_companies-preview
+        include blocks/_companies-adv
+        .container
+            .companies__promo
+                p Микро-сообщества, лидеры мнений, НЕbull shit инфлюэнсеры продвигают ваш бизнес эффективнее в разы
+                img(src="@img/message.svg", alt="message image")
+            .companies__adv 
+                ul
+                    li GROU дает доступ к лидерам мнений и микросообществам
+                    li Легко работать в удобном кабинете GROU с задачами и конкретными цифрами
+                    li GROU помогает правильно упаковывать кампании
+                    li Вы видите результаты выполнения сразу в акаунте
+                img(src="@img/companies-adv-img.jpg", alt="working woman")
+            .companies__social 
+                ul 
+                    li
+                        img(src="@img/icons/icons.svg#facebook", alt="")
+                    li
+                        img(src="@img/icons/icons.svg#instagram", alt="")
+                    li
+                        img(src="@img/icons/icons.svg#youtube", alt="")
+                    li
+                        img(src="@img/icons/icons.svg#twitter", alt="")
+                    li
+                        img(src="@img/icons/icons.svg#twitch", alt="")
+                    li
+                        img(src="@img/icons/icons.svg#tiktok", alt="")
+                    li
+                        img(src="@img/icons/icons.svg#telegram", alt="")
+                    li
+                        img(src="@img/icons/icons.svg#discord", alt="")
+
+                p Доступные каналы продвижени
+        include blocks/_companies-banner
+            
+    include blocks/_footer
+    script(src="js/app.min.js") 
