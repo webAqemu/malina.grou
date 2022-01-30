@@ -3,6 +3,23 @@
 
     @include r(767px)
         margin-bottom: 50px
+
+    &--reverse
+        .banner__inner
+            padding-left: 50%
+
+            @include r(767px)
+                padding: 30px 15px 0
+
+        .banner__img
+            right: auto
+            left: 0
+            max-width: 50%
+            max-height: calc(100% - 50px)
+
+            @include r(767px)
+                max-width: 100%
+                max-height: auto
     
     &__inner
         background-color: $violent

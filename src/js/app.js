@@ -8,6 +8,7 @@ Swiper.use([Navigation, Pagination]);
 document.addEventListener("DOMContentLoaded", function (event) {
     indexSliders();
     mobileMenu();
+    questions();
 });
 
 function indexSliders() {
@@ -123,4 +124,41 @@ function mobileMenu() {
             html.classList.toggle("active");
         }
     });
+}
+
+function questions() {
+    const questions = document.querySelector(".questions")
+    if(questions) {
+        questions.addEventListener("click", function(e) {
+            if(e.target.classList.contains("questions__name")) {
+                const item = e.target.parentElement.querySelector(".questions__content")
+                e.target.parentElement.classList.toggle("active")
+                
+                if (!item.classList.contains('active')) {
+      
+                    item.classList.add('active');
+                    item.style.height = 'auto';
+              
+                    var height = item.clientHeight + 'px';
+              
+                    item.style.height = '0px';
+              
+                    setTimeout(function () {
+                        item.style.height = height;
+                    }, 0);
+                    
+                  } else {
+                    
+                    item.style.height = '0px';
+              
+                    item.addEventListener('transitionend', function () {
+                        item.classList.remove('active');
+                    }, {
+                      once: true
+                    });
+                    
+                  }
+            }
+        })
+    }
 }

@@ -1,0 +1,104 @@
+.questions
+    margin-bottom: 80px
+
+    @include r(767px)
+        margin-bottom: 50px
+    
+    &__inner
+        position: relative
+
+    &__title
+        font-size: 50px
+        font-weight: 700
+        color: $green
+        margin-bottom: 40px
+
+        @include r(767px)
+            font-size: 24px
+            margin-bottom: 25px
+    
+    &__list
+        max-width: 930px
+        width: 100%
+        border-top: 1px solid #ccc
+
+        @include r(1400px)  
+            max-width: 100%
+            margin-bottom: 30px
+
+    &__item
+        position: relative
+        border-bottom: 1px solid #ccc
+
+        &::before,
+        &::after
+            content: ""
+            position: absolute
+            right: 0
+            top: 25px
+            width: 20px
+            height: 3px
+            background-color: $green
+            transition: transform 0.3s
+
+        &::after
+            top: 17px
+            height: 20px
+            width: 3px
+            right: 8.5px
+
+        &.active::after
+            transform: rotate(-90deg)
+
+    &__name
+        font-size: 24px
+        font-weight: 700
+        padding: 20px 0
+        cursor: pointer
+
+        @include r(767px)
+            font-size: 12px
+
+    &__content
+        overflow: hidden
+        transition: height 0.3s
+        padding-bottom: 20px
+        font-weight: 500
+        line-height: 1.4
+        color: #313030
+        max-width: 850px
+        width: 100%
+
+        @include r(767px)
+            font-size: 10px
+
+        &:not(.active)
+            display: none
+
+        .bold
+            font-weight: 700
+        
+        li:not(:last-child)
+            margin-bottom: 15px
+
+            @include r(767px)
+                margin-bottom: 5px
+
+    &__img
+        position: absolute
+        top: 0
+        right: 0
+        max-width: 410px
+        width: 100%
+
+        @include r(1400px)
+            display: none
+        
+        @include r(767px)
+            display: block
+            position: static
+            max-width: 100%
+
+
+
+

@@ -1,0 +1,99 @@
+.afford
+    margin-bottom: 40px
+    
+    &__block
+        position: relative
+        padding: 60px 0
+
+        @include r(767px)
+            padding: 30px 0
+
+        &--reverse
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+
+            .afford__img
+                right: auto
+                left: 0
+
+            @include r(767px)
+                display: block
+
+    &__info
+        max-width: 700px
+        width: 100%
+
+        @include r(767px)
+            margin-bottom: 40px
+
+    &__title
+        font-size: 50px
+        font-weight: 700
+        margin-bottom: 40px
+
+        span
+            color: $green
+
+        @include r(767px)
+            font-size: 24px
+            margin-bottom: 20px
+
+    &__item
+        position: relative
+        font-size: 30px
+        font-weight: 500
+        padding-left: 70px
+
+        @include r(767px)
+            font-size: 12px
+
+        &::before
+            content: ""
+            width: 40px
+            height: 40px
+            background-image: url(../img/emoji/nice.png)
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+
+        &:not(:last-child)
+            margin-bottom: 40px
+
+            @include r(767px)
+                margin-bottom: 35px
+
+    &__img
+        position: absolute
+        top: 0
+        right: 0
+        max-width: 50%
+        max-height: 100%
+
+        @include r(1400px)
+            max-width: 30%
+            top: 50%
+            transform: translateY(-50%)
+
+        @include r(1200px)
+            display: none
+
+        @include r(767px)
+            display: block
+            position: static
+            transform: none
+            max-width: 100%
+
+    &__text
+        font-size: 24px
+        font-weight: 500
+        max-width: 555px
+        margin-bottom: 40px
+
+        @include r(767px)
+            font-size: 12px
+            margin-bottom: 20px
