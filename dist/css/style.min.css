@@ -649,6 +649,7 @@ body {
 }
 .footer__social {
   display: flex;
+  margin-left: auto;
 }
 .footer__item:not(:last-child) {
   margin-right: 20px;
