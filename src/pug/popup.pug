@@ -1,0 +1,17 @@
+include base/_head
+    include blocks/_notification
+    main.main
+        .popup  
+            .container.container--sm 
+                a.popup__logo.logo(href="./index.html")
+                    img.logo__img(src="./img/logo.svg", alt="logo")
+                h1.popup__title Найти инфлюэнсера
+                .popup__inner 
+                    .popup__desc
+                        p Мы подберем для вас партнера (блогера, лидера мнений) что максимально подойдет вашим ожиданиям
+                    form.popup__form(action="#")
+                        input.popup__input(type="text", placeholder="Имя, фамилия", required)  
+                        input.popup__input(type="text", placeholder="Компания", required)  
+                        input.popup__input(type="email", placeholder="Рабочий email", required)  
+                        input.popup__input(type="text", placeholder="Телефон", required)
+                        button.popup__btn.btn.btn--orange(type="submit") Отправить

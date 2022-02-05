@@ -1,0 +1,90 @@
+.popup
+    padding-top: 30px
+
+    &__logo
+        margin: 0 auto 20px
+    
+    &__title
+        font-size: 40px
+        font-weight: 700
+        margin-bottom: 30px
+
+        @include r(767px)
+            font-size: 24px
+            margin-bottom: 20px
+
+    &__inner
+        border-radius: 30px
+        overflow: hidden
+        background-color: #fff
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.05)
+        width: 100%
+
+        @include r(767px)
+            border-radius: 20px
+
+    &__desc
+        background-color: $green
+        text-align: center
+        font-size: 16px
+        font-weight: 500
+        color: white
+        padding: 16px 20px 14px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+        @include r(767px)
+            padding: 11px 20px 9px
+            font-size: 10px
+
+        p
+            max-width: 500px
+            width: 100%
+
+    &__form
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 50px 20px
+
+        @include r(767px)
+            padding: 30px 15px
+
+    &__input
+        max-width: 515px
+        width: 100%
+        margin-bottom: 25px
+        border-radius: 30px
+        border: 1px solid #EFEDED
+        background-color: #f6f6f6
+        font-size: 16px
+        padding: 13px 25px
+        font: inherit
+        outline: none
+
+        @include r(767px)
+            font-size: 12px
+            margin-bottom: 15px
+
+        &::placeholder
+            font: inherit
+            font-weight: 600
+            color: black
+            
+
+        &:nth-last-child(2)
+            margin-bottom: 35px
+
+            @include r(767px)
+                margin-bottom: 25px
+
+    &__btn
+        max-width: 275px
+        width: 100%
+
+
+
+    
